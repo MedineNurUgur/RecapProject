@@ -12,7 +12,7 @@ namespace Entities.Concrete
         public int BrandId { get; set; }
         public int ColorId { get; set; }
         public int ModelYear { get; set; }
-        public float DailyPrice { get; set; }
+        public double DailyPrice { get; set; }
         public String Description { get; set; }
 
     }
