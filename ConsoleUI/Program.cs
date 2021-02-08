@@ -10,29 +10,50 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            //GetCarTest();
+            GetCarDetailTest();
+
+            AddCarTest();
+
+            //AddBrandTest();
+            //AddColorTest();
+
+        }
+
+        private static void AddCarTest()
+        {
             CarManager carManager = new CarManager(new EfCarDal());
-            /*ColorManager colorManager = new ColorManager(new EfColorDal());
+            carManager.AddCar(new Car { CarName = "Civic", BrandId = 1002, ColorId = 1002, DailyPrice = 12.0, Descriptions = "lsdjdhf" });
+        }
+
+        private static void AddColorTest()
+        {
+            ColorManager colorManager = new ColorManager(new EfColorDal());
+            colorManager.AddColor(new Color { ColorName = "Füme" });
+        }
+
+        private static void AddBrandTest()
+        {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
-            Brand brand = new Brand();
-            brand.BrandName = "BMW";
-            brandManager.AddBrand(brand);
-            Color color = new Color();
-            color.ColorName = "Beyaz";
-            colorManager.AddColor(color);
+            brandManager.AddBrand(new Brand { BrandName = "Honda" });
+        }
 
-            Car car = new Car();
-            car.BrandId = 1;
-            car.ColorId = 1;
-            car.DailyPrice = 10.0f;
-            car.ModelYear = 2010;
-            car.Description = "Deneme";
-
-            carManager.AddCar(car);*/
-
+        private static void GetCarTest()
+        {
+            CarManager carManager = new CarManager(new EfCarDal());
 
             foreach (var i in carManager.GetAll())
             {
-                Console.WriteLine(i.Description);
+                Console.WriteLine(i.Descriptions);
+            }
+        }
+        private static void GetCarDetailTest()
+        {
+            CarManager carManager = new CarManager(new EfCarDal());
+
+            foreach (var car in carManager.GetCarDetails())
+            {
+                Console.WriteLine(car.CarName + " / " + car.ColorName + " / " + car.BrandName + " / " + car.DailyPrice);
             }
         }
     }
