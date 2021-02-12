@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Utilities.Results;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -10,14 +11,31 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            //GetCarTest();
-            GetCarDetailTest();
+            AddCustomerTest();
 
-            AddCarTest();
+            //AddUserTest();
+            //GetCarTest();
+            //GetCarDetailTest();
+
+            //AddCarTest();
 
             //AddBrandTest();
             //AddColorTest();
 
+        }
+
+        private static void AddCustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            IResult result = customerManager.AddCustomer(new Customer { UserId = 1, CompanyName = "Radin" });
+            Console.WriteLine(result.Message);
+        }
+
+        private static void AddUserTest()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            IResult result = userManager.AddUser(new User { FirstName = "Medine", LastName = "Ugur", Email = "example@example.com", UserPassword = "1234567890" });
+            Console.WriteLine(result.Message);
         }
 
         private static void AddCarTest()
