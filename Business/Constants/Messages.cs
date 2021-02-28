@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -23,15 +24,20 @@ namespace Business.Constants
         public static string UserDeleted = "Kullanıcı Silindi.";
         public static string UserUpdated = "Kullanıcı Güncellendi.";
 
-        public static string CustomerAdded = "Kullanıcı eklendi";
-        public static string CustomerDeleted = "Kullanıcı Silindi.";
-        public static string CustomerUpdated = "Kullanıcı Güncellendi.";
+        public static string CustomerAdded = "Müşteri eklendi";
+        public static string CustomerDeleted = "Müşteri Silindi.";
+        public static string CustomerUpdated = "Müşteri Güncellendi.";
 
-        public static string RentalAdded = "Kullanıcı eklendi";
-        public static string RentalDeleted = "Kullanıcı Silindi.";
-        public static string RentalUpdated = "Kullanıcı Güncellendi.";
+        public static string RentalAdded = "İşlem eklendi";
+        public static string RentalDeleted = "İşlem Silindi.";
+        public static string RentalUpdated = "İşlem Güncellendi.";
         public static string CarRented = "Araç dolu.";
-        
+
+        public static string CarImageAdded = "Resim eklendi";
+        public static string CarImageDeleted = "Resim Silindi.";
+        public static string CarImageUpdated = "Resim Güncellendi.";
+        public static string CarImageCountOfCarError = "Bir arabaya 5 den fazla fotoğraf yüklenemez.";
+        public static string DefaultCarImageNotFound = "Resim Yok";
     }
 
 }
