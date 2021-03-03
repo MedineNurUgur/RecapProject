@@ -31,13 +31,7 @@ namespace ConsoleUI
             Console.WriteLine(result.Message);
         }
 
-        private static void AddUserTest()
-        {
-            UserManager userManager = new UserManager(new EfUserDal());
-            IResult result = userManager.AddUser(new User { FirstName = "Medine", LastName = "Ugur", Email = "example@example.com", UserPassword = "1234567890" });
-            Console.WriteLine(result.Message);
-        }
-
+        
         private static void AddCarTest()
         {
             CarManager carManager = new CarManager(new EfCarDal());

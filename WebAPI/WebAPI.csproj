@@ -15,5 +15,9 @@
     <Folder Include="Public\Images\CarImage\Upload\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.12" />
+  </ItemGroup>
+
 
 </Project>
