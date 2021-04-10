@@ -90,5 +90,11 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<CarDetailDto>(_carDal.GetCarByCarIdWithDetails(c => c.CarId == carId));
         }
+
+        public IDataResult<List<CarDetailDto>> GetCarsByFilters(int colorId, int brandId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(
+              _carDal.GetCarDetails(c => c.BrandId == brandId && c.ColorId == colorId), "Listed");
+        }
     }
 }

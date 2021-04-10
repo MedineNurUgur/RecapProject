@@ -48,6 +48,10 @@ namespace Business.Constants
         public static string UserAlreadyExists = "Öyle bir kullanıcı zaten var.";
         public static string AccessTokenCreated = "Token oluşturuldu.";
 
+        public  static string AccountAdded = "account eklendi.";
+        public static string AccountUpdated = "Account güncellendi.";
+        public static string AccountDeleted = "Account silindi.";
+        public static string AccountListed = "listelendi.";
     }
 
 }
