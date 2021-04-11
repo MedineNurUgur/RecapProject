@@ -82,6 +82,7 @@ namespace WebAPI
                     Path.Combine(env.ContentRootPath, "Images")),
                 RequestPath = "/Images"
             });
+            app.ConfigureCustomExceptionMiddleware();
 
             app.UseRouting();
 
